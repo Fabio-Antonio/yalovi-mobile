@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "223995574229",
+    "firebase_url": "https://contacto-7947a.firebaseio.com",
+    "project_id": "contacto-7947a",
+    "storage_bucket": "contacto-7947a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223995574229:android:a5dd7a8ae72d9495602f5c",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223995574229-nd77nbcn8jfr6n94q9j2q55q62aqle1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase",
+            "certificate_hash": "bfcfdbd9061affa88358b2803c1fbfc9c1e2476e"
+          }
+        },
+        {
+          "client_id": "223995574229-p3qfaiddfd4j3ipjrc9msftb69kc61rb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmEhaStgyQ1muJJ7mCxz8O0C84X1y2Cmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223995574229-p3qfaiddfd4j3ipjrc9msftb69kc61rb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223995574229:android:1d8441a919cf3007602f5c",
+        "android_client_info": {
+          "package_name": "com.example.platzi_trips_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223995574229-ffnp5ud16f0fmnsv9blt3pv3nk0fgs6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platzi_trips_app",
+            "certificate_hash": "bfcfdbd9061affa88358b2803c1fbfc9c1e2476e"
+          }
+        },
+        {
+          "client_id": "223995574229-p3qfaiddfd4j3ipjrc9msftb69kc61rb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmEhaStgyQ1muJJ7mCxz8O0C84X1y2Cmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223995574229-p3qfaiddfd4j3ipjrc9msftb69kc61rb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
