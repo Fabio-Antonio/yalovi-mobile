@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
 import 'package:platzi_trips_app/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
@@ -17,7 +18,7 @@ class addDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var myProvider = BlocProvider.of<userBloc>(context);
+    var myProvider = BlocProvider.of<productosBloc>(context);
 
     // TODO: implement build
     return Scaffold(

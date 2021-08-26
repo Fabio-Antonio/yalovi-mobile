@@ -1,3 +1,4 @@
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
 import 'dart:convert';
 
@@ -6,7 +7,7 @@ import 'package:http/http.dart' as http;
 class caracteristicaApi {
   Future<String> createCaracteristica(Caracteristica _caracteristica) async {
     final response = await http.post(
-      Uri.parse('http://192.168.1.50:3000/api/Caracteristicas'),
+      Uri.parse(Enviroment().url_qa + '/Caracteristicas'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

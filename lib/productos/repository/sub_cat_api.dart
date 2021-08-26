@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/sub_categoria.dart';
 
 class subCatApi {
-  final String apiUrl = "http://192.168.1.50:3000/api/clasificacion";
+  final String apiUrl = Enviroment().url_qa + "/clasificacion";
 
   List<Sub_categoria> parseSubCat(String responseBody) {
     final parsed =

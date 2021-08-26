@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/color.dart';
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 import 'package:platzi_trips_app/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
-import 'package:platzi_trips_app/widgets/dropdown.dart';
+import 'package:platzi_trips_app/productos/ui/widgets/dropdown.dart';
 
 class addColor extends StatefulWidget {
-  final UserBloc = userBloc();
+  final ProductosBloc = productosBloc();
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   String uid;
@@ -23,7 +24,7 @@ class addColor extends StatefulWidget {
 class _addColor extends State<addColor> {
   @override
   Widget build(BuildContext context) {
-    var myProvider = BlocProvider.of<userBloc>(context);
+    var myProvider = BlocProvider.of<productosBloc>(context);
     late Colores _color;
 
     _color = myProvider.colores;

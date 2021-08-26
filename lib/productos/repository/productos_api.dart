@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
 
 class productosApi {
-  final String apiUrl = "http://192.168.1.50:3000/api/productos";
+  final String apiUrl = Enviroment().url_qa + "/productos";
 
   List<Producto> parseProductos(String responseBody) {
     final parsed =
@@ -19,7 +20,7 @@ class productosApi {
 
   Future<String> createProduct(Producto _producto) async {
     final response = await http.post(
-      Uri.parse('http://192.168.1.50:3000/api/Productos'),
+      Uri.parse(apiUrl),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

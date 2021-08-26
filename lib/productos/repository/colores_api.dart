@@ -1,10 +1,11 @@
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/color.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 
 class coloresApi {
-  final String apiUrl = "http://192.168.1.50:3000/api/color";
+  final String apiUrl = Enviroment().url_qa + "/color";
 
   List<Colores> parseColores(String responseBody) {
     final parsed =
@@ -20,7 +21,7 @@ class coloresApi {
 
   Future<String> createColores(Colores_c _color_c) async {
     final response = await http.post(
-      Uri.parse('http://192.168.1.50:3000/api/color_c'),
+      Uri.parse(Enviroment().url_qa + '/color_c'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

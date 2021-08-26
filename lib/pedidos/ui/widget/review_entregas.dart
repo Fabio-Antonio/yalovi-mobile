@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/pedidos/model/ventas.dart';
-import 'package:platzi_trips_app/ui/screens/home.dart';
+import 'package:platzi_trips_app/pedidos/ui/screen/home.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
 
 class reviewEntregas extends StatelessWidget {

@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
-import 'package:platzi_trips_app/productos/model/marca.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
+import 'package:platzi_trips_app/productos/model/color.dart';
 
-class dropdown_marca extends StatefulWidget {
-  final ValueChanged<Marca?>? onValueChanged;
-  final UserBloc = userBloc();
-  Marca marca;
+class dropdown extends StatefulWidget {
+  final ProductosBloc = productosBloc();
 
-  dropdown_marca({Key? key, required this.onValueChanged, required this.marca});
+  late Colores color;
+  final ValueChanged<Colores?>? onValueChanged;
+
+  dropdown({Key? key, required this.onValueChanged, required this.color});
 
   @override
-  _dropdown_marca createState() => _dropdown_marca();
+  _dropdown createState() => _dropdown();
 }
 
-class _dropdown_marca extends State<dropdown_marca> {
-  String drop = "";
+class _dropdown extends State<dropdown> {
   @override
   Widget build(BuildContext context) {
+    BlocProvider.of<productosBloc>(context);
     // TODO: implement build
-    BlocProvider.of<userBloc>(context);
 
-    return FutureBuilder<List<Marca>>(
-      future: widget.UserBloc.getMarcas(),
+    return FutureBuilder<List<Colores>>(
+      future: widget.ProductosBloc.getColores(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (!snapshot.hasError || snapshot.hasData || snapshot.data == null) {
           return _buildDropdown(snapshot.data);
@@ -33,20 +34,20 @@ class _dropdown_marca extends State<dropdown_marca> {
     );
   }
 
-  Widget _buildDropdown(List<Marca> snapshot) {
+  Widget _buildDropdown(List<Colores> snapshot) {
     if (snapshot == null) {
       return CircularProgressIndicator();
     } else {
-      return DropdownButton<Marca>(
-        value: snapshot[0],
+      return DropdownButton<Colores>(
+        value: snapshot.first,
         icon: Icon(Icons.arrow_circle_down_outlined),
-        hint: Text('Seleccione la marca'),
-        items: snapshot.map((Marca value) {
-          return DropdownMenuItem<Marca>(
+        hint: Text('Seleccione un color'),
+        items: snapshot.map((Colores value) {
+          return DropdownMenuItem<Colores>(
               value: value,
               child: Row(
                 children: <Widget>[
-                  Text(value.marca),
+                  Text(value.color),
                   Icon(Icons.arrow_back_ios_new)
                 ],
               ));

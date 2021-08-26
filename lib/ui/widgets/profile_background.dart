@@ -8,7 +8,7 @@ class ProfileBackground extends StatelessWidget {
 
     return Container(
       width: screenWidth,
-      height: screenHeight * 0.45,
+      height: screenHeight * 0.40,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [Color(0xFFF09F00), Colors.amber],

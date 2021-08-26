@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/pedidos/model/pedidos.dart';
 import 'package:platzi_trips_app/pedidos/ui/widget/pedidos_card.dart';
 
 class listaPedidos extends StatelessWidget {
   late Pedidos _pedidos;
   String token;
-  final Userbloc = userBloc();
+  final PedidosBloc = pedidosBloc();
 
   listaPedidos({Key? key, required this.token});
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<pedidosBloc>(context);
     return FutureBuilder<List<Pedidos>>(
-      future: Userbloc.getPedidos(token),
+      future: PedidosBloc.getPedidos(token),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError || !snapshot.hasData) {
           print("no contiene pedidos");

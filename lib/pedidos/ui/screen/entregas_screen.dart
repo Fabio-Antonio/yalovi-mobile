@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/pedidos/ui/widget/review_entregas_list.dart';

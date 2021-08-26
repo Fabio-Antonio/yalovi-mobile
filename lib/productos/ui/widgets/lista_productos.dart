@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
 import 'producto_card.dart';
 
 class listaProductos extends StatelessWidget {
   late Producto _producto;
-  final Userbloc = userBloc();
+  final Productosbloc = productosBloc();
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<productosBloc>(context);
     return FutureBuilder<List<Producto>>(
-      future: Userbloc.getProduct(),
+      future: Productosbloc.getProduct(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError || !snapshot.hasData) {
           return Container(

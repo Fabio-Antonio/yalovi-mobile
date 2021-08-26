@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/sub_categoria.dart';
 
 class dropdown_sub extends StatefulWidget {
   final ValueChanged<Sub_categoria?>? onValueChanged;
-  final UserBloc = userBloc();
+  final ProductosBloc = productosBloc();
   Sub_categoria sub_categoria;
   dropdown_sub(
       {Key? key, required this.onValueChanged, required this.sub_categoria});
@@ -19,10 +20,10 @@ class _dropdown_sub extends State<dropdown_sub> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<productosBloc>(context);
 
     return FutureBuilder<List<Sub_categoria>>(
-      future: widget.UserBloc.getSubcat(),
+      future: widget.ProductosBloc.getSubcat(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (!snapshot.hasError || snapshot.hasData || snapshot.data == null) {
           return _buildDropdown(snapshot.data);

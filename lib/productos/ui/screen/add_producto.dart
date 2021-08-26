@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/marca.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
 import 'package:platzi_trips_app/productos/model/sub_categoria.dart';
 import 'package:platzi_trips_app/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
-import 'package:platzi_trips_app/widgets/dropdown_marca.dart';
-import 'package:platzi_trips_app/widgets/dropdown_sub.dart';
+import 'package:platzi_trips_app/productos/ui/widgets/dropdown_marca.dart';
+import 'package:platzi_trips_app/productos/ui/widgets/dropdown_sub.dart';
 import 'package:platzi_trips_app/widgets/input_text.dart';
 
 class addProducto extends StatefulWidget {
@@ -63,7 +64,7 @@ class _addProducto extends State<addProducto> {
 
   @override
   Widget build(BuildContext context) {
-    var myProvider = BlocProvider.of<userBloc>(context);
+    var myProvider = BlocProvider.of<productosBloc>(context);
     widget._sub_categoria = myProvider.sub_categoria;
     widget._marca = myProvider.marca;
     // TODO: implement build

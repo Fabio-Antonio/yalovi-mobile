@@ -5,7 +5,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as LocationManager;
 import 'package:geocoding/geocoding.dart';
 import 'package:platzi_trips_app/bloc/bloc_user.dart';
-import 'package:platzi_trips_app/ui/modals/modal.dart';
+import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
+import 'package:platzi_trips_app/modals/modal.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
 
 class Home extends StatefulWidget {
@@ -17,7 +18,7 @@ class Home extends StatefulWidget {
 }
 
 class _home extends State<Home> {
-  final UserBloc = userBloc();
+  final PedidosBloc = pedidosBloc();
 
   CameraPosition _initialPosition =
       CameraPosition(target: LatLng(19.442974161976036, -99.13336345152011));
@@ -39,19 +40,19 @@ class _home extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<pedidosBloc>(context);
     GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
     List<Marker> _markers = <Marker>[];
-    UserBloc.locations(widget.address)
+    PedidosBloc.locations(widget.address)
         .then((List<Location> value) => setState(() {
-              UserBloc.latitud = value[0].latitude;
-              UserBloc.longitud = value[0].longitude;
+              PedidosBloc.latitud = value[0].latitude;
+              PedidosBloc.longitud = value[0].longitude;
             }));
 
     _markers.add(Marker(
         markerId: MarkerId('SomeId'),
-        position: LatLng(UserBloc.latitud, UserBloc.longitud),
+        position: LatLng(PedidosBloc.latitud, PedidosBloc.longitud),
         infoWindow: InfoWindow(title: widget.address)));
 
     return Scaffold(
@@ -89,7 +90,7 @@ class _home extends State<Home> {
                     builder: (BuildContext context) {
                       return ModalDialog(
                           onPressed: () {
-                            UserBloc.updateVentas(widget.token, "Completado")
+                            PedidosBloc.updateVentas(widget.token, "Completado")
                                 .then((value) => Navigator.of(context).pop());
                           },
                           title: "¿Desea finalizar?",

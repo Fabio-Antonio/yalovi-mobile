@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/pedidos/model/ventas.dart';
 import 'package:platzi_trips_app/pedidos/ui/widget/review_ventas.dart';
 
 class reviewVentasList extends StatelessWidget {
   late Ventas _ventas;
-  final Userbloc = userBloc();
+  final Pedidosbloc = pedidosBloc();
   String status;
   reviewVentasList({Key? key, required this.status});
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<pedidosBloc>(context);
     return FutureBuilder<List<Ventas>>(
-      future: Userbloc.getVentas(status),
+      future: Pedidosbloc.getVentas(status),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError || !snapshot.hasData) {
           return Container(

@@ -1,9 +1,10 @@
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/pedidos/model/pedidos.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class pedidosApi {
-  final String apiUrl = "http://192.168.1.50:3000/api/pedidos";
+  final String apiUrl = Enviroment().url_qa + "/pedidos";
 
   List<Pedidos> parsePedidos(String responseBody) {
     final parsed =

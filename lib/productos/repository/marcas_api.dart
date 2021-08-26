@@ -1,9 +1,10 @@
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/marca.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class marcasApi {
-  final String apiUrl = "http://192.168.1.50:3000/api/marca";
+  final String apiUrl = Enviroment().url_qa + "/marca";
 
   List<Marca> parseMarcas(String responseBody) {
     final parsed =

@@ -1,12 +1,13 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/imagen.dart';
 
 class imagenesApi {
   Future<String> createImage(Imagen _imagen) async {
     final response = await http.post(
-      Uri.parse('http://192.168.1.50:3000/api/imagenes'),
+      Uri.parse(Enviroment().url_qa + '/imagenes'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
