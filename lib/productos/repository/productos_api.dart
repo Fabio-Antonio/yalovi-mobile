@@ -41,6 +41,8 @@ class productosApi {
       return jsonDecode(response.body)["msg"];
     } else if (response.statusCode == 500) {
       return jsonDecode(response.body)["msg"];
+    } else if (response.statusCode == 422) {
+      return jsonDecode(response.body)["msg"];
     } else {
       // If the server did not return a 201 CREATED response,
       // then throw an exception.
