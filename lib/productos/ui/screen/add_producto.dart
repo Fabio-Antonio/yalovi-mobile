@@ -173,7 +173,11 @@ class _addProducto extends State<addProducto> {
                             url_imagen: widget._controllerUrlText.text);
                         myProvider.createProduct(_producto).then((value) =>
                             widget._scaffoldKey.currentState!
-                                .showSnackBar(SnackBar(content: Text(value))));
+                                .showSnackBar(SnackBar(content: Text(value)))
+                                .closed
+                                .then((SnackBarClosedReason reason) {
+                              Navigator.of(context).pop();
+                            }));
                       },
                       tittle: "Crear producto",
                     )
