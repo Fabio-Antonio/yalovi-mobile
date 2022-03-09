@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
-import 'package:platzi_trips_app/ui/screens/profile_header.dart';
-import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
+import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
+import 'package:platzi_trips_app/user/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
 import 'package:platzi_trips_app/widgets/input_text.dart';
 
