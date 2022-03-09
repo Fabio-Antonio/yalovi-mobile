@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/ui/model/mensaje.dart';
+import 'package:platzi_trips_app/user/ui/model/mensaje.dart';
 
 class Mensajes {
   final List<Mensaje> misMensajes;

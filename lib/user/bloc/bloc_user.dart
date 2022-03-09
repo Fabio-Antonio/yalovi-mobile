@@ -5,9 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:platzi_trips_app/repository/analytics_repository.dart';
-import 'package:platzi_trips_app/ui/model/analytics.dart';
-import '../repository/auth_repository.dart';
+import 'package:platzi_trips_app/user/repository/analytics_repository.dart';
+import 'package:platzi_trips_app/user/ui/model/analytics.dart';
+import 'package:platzi_trips_app/user/repository/auth_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:http/http.dart' as http;
@@ -26,8 +26,8 @@ class userBloc with ChangeNotifier implements Bloc {
     return _auth_repository.signInFirebase();
   }
 
-  Future<List<Analytics>> getAnalytics() {
-    return _analyticsRepository.getAnalytics();
+  Future<List<Analytics>> getAnalytics() async {
+    return await _analyticsRepository.getAnalytics();
   }
 
   Future<PermissionStatus> permission() async {

@@ -4,7 +4,7 @@ import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as LocationManager;
 import 'package:geocoding/geocoding.dart';
-import 'package:platzi_trips_app/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/modals/modal.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';

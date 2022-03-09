@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'package:platzi_trips_app/bloc/bloc_user.dart';
-import 'package:platzi_trips_app/ui/model/analytics.dart';
+import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/ui/model/analytics.dart';
 import 'profile_place.dart';
 import '../model/place.dart';
 

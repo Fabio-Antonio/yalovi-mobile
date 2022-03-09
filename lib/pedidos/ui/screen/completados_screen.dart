@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/ui/screens/profile_header.dart';
-import 'package:platzi_trips_app/ui/widgets/profile_background.dart';
+import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
+import 'package:platzi_trips_app/user/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/pedidos/ui/widget/review_ventas_list.dart';
 
 class completadosScreen extends StatelessWidget {

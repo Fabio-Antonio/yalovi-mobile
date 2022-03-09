@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../widgets/gradient_back.dart';
-import '../../widgets/button_green.dart';
-import '../../bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/ui/model/user.dart';
+import 'package:platzi_trips_app/widgets/gradient_back.dart';
+import 'package:platzi_trips_app/widgets/button_green.dart';
+import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:location_permissions/location_permissions.dart';
-import '../../platzi_trips.dart';
+import 'package:platzi_trips_app/platzi_trips.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreen extends State<SignInScreen> {
   final UserBloc = userBloc();
-
+  late user _user;
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<userBloc>(context);
@@ -62,8 +63,12 @@ class _SignInScreen extends State<SignInScreen> {
               ),
               buttonGreen(
                 onPressed: () {
-                  UserBloc.signInWithGoogle().then((UserCredential user) =>
-                      print("El usuario es ${user.user!.displayName}"));
+                  UserBloc.signInWithGoogle().then((UserCredential usuario) =>
+                      _user = new user(
+                          name: usuario.user!.displayName!,
+                          email: usuario.user!.email!,
+                          photoURL: usuario.user!.photoURL!,
+                          phoneNumber: usuario.user!.phoneNumber!));
                 },
                 tittle: "Ingresar con Google",
               )
