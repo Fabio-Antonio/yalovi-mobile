@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/user/model/user.dart';
 import '../widgets/user_info.dart';
 import '../widgets/button_bar.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import '../../bloc/bloc_user.dart';
-import '../model/user.dart';
 
 class ProfileHeader extends StatelessWidget {
   late user _user;
@@ -30,7 +30,7 @@ class ProfileHeader extends StatelessWidget {
   Widget showProfileData(AsyncSnapshot snapshot) {
     if (!snapshot.hasData || snapshot.hasError) {
       return Container(
-        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 50.0),
+        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
         child: Column(
           children: <Widget>[
             CircularProgressIndicator(),
@@ -54,9 +54,9 @@ class ProfileHeader extends StatelessWidget {
       );
 
       return Container(
-        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
+        margin: EdgeInsets.only(left: 0.0, right: 10.0, top: 0.0),
         child: Column(
-          children: <Widget>[UserInfo(_user), ButtonsBar()],
+          children: <Widget>[UserInfo(_user)],
         ),
       );
     }

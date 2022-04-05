@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
+import 'package:platzi_trips_app/clasification/model/category.dart';
 import 'package:platzi_trips_app/productos/model/color.dart';
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 import 'package:platzi_trips_app/productos/model/imagen.dart';
@@ -8,6 +9,7 @@ import 'package:platzi_trips_app/productos/model/marca.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
 import 'package:platzi_trips_app/productos/model/sub_categoria.dart';
 import 'package:platzi_trips_app/productos/repository/caracteristicas_repository.dart';
+import 'package:platzi_trips_app/clasification/repository/categoria_repository.dart';
 import 'package:platzi_trips_app/productos/repository/colores_repository.dart';
 import 'package:platzi_trips_app/productos/repository/imagenes_repository.dart';
 import 'package:platzi_trips_app/productos/repository/marcas_repository.dart';
@@ -78,7 +80,7 @@ class productosBloc with ChangeNotifier implements Bloc {
   }
 
   Future<String> createProduct(Producto _producto) async {
-    return _productos_repository.createProducto(_producto);
+    return await _productos_repository.createProducto(_producto);
   }
 
   @override

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/clasification/ui/screens/add_category.dart';
+import 'package:platzi_trips_app/clasification/ui/screens/search_category.dart';
+import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_trips.dart';
 import 'package:platzi_trips_app/user/ui/screens/home_trips.dart';
 import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
@@ -14,7 +18,7 @@ class PlatziTrips extends StatefulWidget {
 
 class _PlatziTrips extends State<PlatziTrips> {
   int indexTap = 0;
-
+  final UserBloc = userBloc();
   final List<Widget> widgetsChildren = [
     HomeTrips(),
     searchTrips(),
@@ -54,28 +58,30 @@ class _PlatziTrips extends State<PlatziTrips> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: ProfileHeader(),
             ),
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('Mi cuenta'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => addCategory()));
               },
             ),
             ListTile(
-              title: const Text('Item 2'),
+              title: const Text('Clasificación'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => searchCategory()));
+              },
+            ),
+            ListTile(
+              title: const Text('Salir'),
+              onTap: () {
+                UserBloc.signOut();
               },
             ),
           ],

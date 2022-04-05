@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
-import 'package:platzi_trips_app/user/ui/model/analytics.dart';
+import 'package:platzi_trips_app/user/model/analytics.dart';
+import 'package:platzi_trips_app/user/model/place.dart';
 import 'profile_place.dart';
-import '../model/place.dart';
 
 class ProfilePlacesList extends StatelessWidget {
   late Analytics _analytics;
