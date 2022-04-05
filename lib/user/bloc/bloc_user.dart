@@ -6,7 +6,7 @@ import 'package:http/http.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:platzi_trips_app/user/repository/analytics_repository.dart';
-import 'package:platzi_trips_app/user/ui/model/analytics.dart';
+import 'package:platzi_trips_app/user/model/analytics.dart';
 import 'package:platzi_trips_app/user/repository/auth_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';

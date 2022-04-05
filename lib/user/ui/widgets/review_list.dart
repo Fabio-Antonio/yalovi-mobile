@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/user/ui/model/mensaje.dart';
+import 'package:platzi_trips_app/user/model/mensaje.dart';
 import 'review.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:platzi_trips_app/user/ui/model/mensaje.dart';
+import 'package:platzi_trips_app/user/model/mensaje.dart';
 
 class ReviewList extends StatelessWidget {
   late Query _ref;

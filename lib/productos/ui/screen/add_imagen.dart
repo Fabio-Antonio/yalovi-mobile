@@ -3,7 +3,6 @@ import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/imagen.dart';
-import 'package:platzi_trips_app/user/ui/model/user.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/widgets/photo_card.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';

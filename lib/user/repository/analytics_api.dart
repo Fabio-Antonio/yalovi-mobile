@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/enviroment.dart';
-import 'package:platzi_trips_app/user/ui/model/analytics.dart';
+import 'package:platzi_trips_app/user/model/analytics.dart';
 
 class analyticsApi {
   final String apiUrl = Enviroment().url_qa + "/analytical";
