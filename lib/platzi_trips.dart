@@ -60,8 +60,13 @@ class _PlatziTrips extends State<PlatziTrips> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
+                  borderRadius: BorderRadius.circular(0.0),
+                  gradient: LinearGradient(
+                      colors: [Colors.amberAccent, Colors.amber],
+                      begin: FractionalOffset(0.2, 0.0),
+                      end: FractionalOffset(1.0, 0.6),
+                      stops: [0.0, 0.6],
+                      tileMode: TileMode.clamp)),
               child: ProfileHeader(),
             ),
             ListTile(
