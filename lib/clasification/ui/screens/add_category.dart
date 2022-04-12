@@ -28,7 +28,7 @@ class addCategory extends StatelessWidget {
             children: <Widget>[
               ProfileHeader(),
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 60.0),
                 child: Column(
                   children: <Widget>[
                     TextInput(
