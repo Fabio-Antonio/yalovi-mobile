@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class productosApi {
   final String apiUrl = Enviroment().url_qa + "/productos";
+  final _securitySingleton = securitySingleton.instance;
 
   List<Producto> parseProductos(String responseBody) {
     final parsed =
@@ -23,6 +25,7 @@ class productosApi {
       Uri.parse(apiUrl),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'x-token': _securitySingleton!.tokenAccess
       },
       body: jsonEncode(<String, dynamic>{
         'sub_categoria': _producto.sub_categoria,

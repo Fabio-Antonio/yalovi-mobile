@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 import 'package:platzi_trips_app/user/model/user.dart';
 import 'package:platzi_trips_app/widgets/gradient_back.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
@@ -19,6 +20,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreen extends State<SignInScreen> {
   final UserBloc = userBloc();
   late user _user;
+  final _securitySingleton = securitySingleton.instance;
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<userBloc>(context);
@@ -63,12 +65,9 @@ class _SignInScreen extends State<SignInScreen> {
               ),
               buttonGreen(
                 onPressed: () {
-                  UserBloc.signInWithGoogle().then((UserCredential usuario) =>
-                      _user = new user(
-                          name: usuario.user!.displayName!,
-                          email: usuario.user!.email!,
-                          photoURL: usuario.user!.photoURL!,
-                          phoneNumber: usuario.user!.phoneNumber!));
+                  UserBloc.signInWithGoogle().then((_user) =>
+                      UserBloc.generateToken(_user).then(
+                          (value) => _securitySingleton!.tokenAccess = value));
                 },
                 tittle: "Ingresar con Google",
               )

@@ -3,14 +3,18 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/clasification/model/category.dart';
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class categoriaApi {
   final String apiUrl = Enviroment().url_qa + '/categorias';
+  final _securitySingleton = securitySingleton.instance;
+
   Future<String> createCategory(Category _category) async {
     final response = await http.post(
       Uri.parse(apiUrl),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'x-token': _securitySingleton!.tokenAccess
       },
       body: jsonEncode(<String, String>{
         'categoria': _category.categoria,

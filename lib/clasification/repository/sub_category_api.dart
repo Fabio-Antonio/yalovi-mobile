@@ -2,15 +2,18 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/clasification/model/sub_category.dart';
 import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class subCategoryApi {
   final String apiUrl = Enviroment().url_qa + "/clasificacion/";
+  final _securitySingleton = securitySingleton.instance;
 
   Future<String> createSubCategory(Sub_category _sub_category) async {
     final response = await http.post(
       Uri.parse(apiUrl),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'x-token': _securitySingleton!.tokenAccess
       },
       body: jsonEncode(<String, String>{
         'categoria': _sub_category.categoria,

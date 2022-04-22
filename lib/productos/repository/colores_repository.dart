@@ -1,5 +1,5 @@
 import 'package:platzi_trips_app/productos/repository/colores_api.dart';
-import 'package:platzi_trips_app/productos/model/color.dart';
+import 'package:platzi_trips_app/productos/model/selections.dart';
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 
 class coloresRepository {
