@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
 import 'package:platzi_trips_app/clasification/model/category.dart';
-import 'package:platzi_trips_app/productos/model/color.dart';
+import 'package:platzi_trips_app/productos/model/selections.dart';
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 import 'package:platzi_trips_app/productos/model/imagen.dart';
 import 'package:platzi_trips_app/productos/model/marca.dart';
@@ -26,7 +26,7 @@ class productosBloc with ChangeNotifier implements Bloc {
 
   String url = "";
 
-  late Colores colores = Colores(id: "", color: "");
+  late Colores colores = Colores(name: "", code: "");
   late Marca marca = Marca(id: "", marca: "");
   late Sub_categoria sub_categoria =
       Sub_categoria(id: "", categoria: "", sub_categoria: "");
@@ -60,6 +60,10 @@ class productosBloc with ChangeNotifier implements Bloc {
 
   Future<List<Marca>> getMarcas() async {
     return await _marcasRepository.getMarcas();
+  }
+
+  Future<String> createMarca(Marca _marca) async {
+    return await _marcasRepository.createMarca(_marca);
   }
 
   Future<List<Sub_categoria>> getSubcat() async {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
-import 'package:platzi_trips_app/productos/model/color.dart';
+import 'package:platzi_trips_app/productos/model/selections.dart';
 
 class dropdown extends StatefulWidget {
   final ProductosBloc = productosBloc();
@@ -47,7 +47,7 @@ class _dropdown extends State<dropdown> {
               value: value,
               child: Row(
                 children: <Widget>[
-                  Text(value.color),
+                  Text(value.name),
                   Icon(Icons.arrow_back_ios_new)
                 ],
               ));

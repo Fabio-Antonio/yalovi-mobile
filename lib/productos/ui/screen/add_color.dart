@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
-import 'package:platzi_trips_app/productos/model/color.dart';
+import 'package:platzi_trips_app/productos/model/selections.dart';
 import 'package:platzi_trips_app/productos/model/color_c.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/widgets/profile_background.dart';
@@ -37,7 +37,7 @@ class _addColor extends State<addColor> {
             children: <Widget>[
               ProfileHeader(),
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 60.0),
                 child: Column(
                   children: <Widget>[
                     Container(
@@ -51,7 +51,7 @@ class _addColor extends State<addColor> {
                             myProvider.colores = val;
                             widget._scaffoldKey.currentState!
                                 .showSnackBar(SnackBar(
-                              content: Text(myProvider.colores.color),
+                              content: Text(myProvider.colores.name),
                             ));
                           });
                         },
@@ -60,9 +60,9 @@ class _addColor extends State<addColor> {
                     buttonGreen(
                       onPressed: () {
                         widget._colores_c = Colores_c(
-                            id: "t",
-                            producto: widget.uid,
-                            color: myProvider.colores.id);
+                            id: widget.uid,
+                            name: myProvider.colores.name,
+                            code: myProvider.colores.code);
                         myProvider.createColores(widget._colores_c).then(
                             (value) => widget._scaffoldKey.currentState!
                                     .showSnackBar(SnackBar(

@@ -2,9 +2,11 @@ import 'package:platzi_trips_app/enviroment.dart';
 import 'package:platzi_trips_app/pedidos/model/ventas.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class ventasApi {
   final String apiUrl = Enviroment().url_qa + "/ventas";
+  final _securitySingleton = securitySingleton.instance;
 
   List<Ventas> parseVentas(String responseBody) {
     final parsed =
@@ -13,7 +15,11 @@ class ventasApi {
   }
 
   Future<List<Ventas>> getVentasApi(String _status) async {
-    var result = await http.get(Uri.parse(apiUrl + "/" + _status));
+    var result = await http
+        .get(Uri.parse(apiUrl + "/" + _status), headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'x-token': _securitySingleton!.tokenAccess
+    });
     return parseVentas(result.body);
   }
 
@@ -22,6 +28,7 @@ class ventasApi {
       Uri.parse(apiUrl + "/" + _token + "/" + _status),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'x-token': _securitySingleton!.tokenAccess
       },
     );
 

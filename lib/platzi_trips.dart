@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/clasification/ui/screens/add_category.dart';
 import 'package:platzi_trips_app/clasification/ui/screens/search_category.dart';
+import 'package:platzi_trips_app/productos/ui/screen/add_marca.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_trips.dart';
@@ -71,16 +72,20 @@ class _PlatziTrips extends State<PlatziTrips> {
             ),
             ListTile(
               title: const Text('Mi cuenta'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => addCategory()));
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text('Clasificación'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => searchCategory()));
+              },
+            ),
+            ListTile(
+              title: const Text('Marcas'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => addMarca()));
               },
             ),
             ListTile(

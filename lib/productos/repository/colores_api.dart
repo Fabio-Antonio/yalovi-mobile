@@ -1,21 +1,31 @@
 import 'package:platzi_trips_app/enviroment.dart';
-import 'package:platzi_trips_app/productos/model/color.dart';
+import 'package:platzi_trips_app/productos/model/selections.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/productos/model/color_c.dart';
+import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class coloresApi {
-  final String apiUrl = Enviroment().url_qa + "/color";
+  final String apiUrl = Enviroment().url_qa + "/selections";
+  final _securitySingleton = securitySingleton.instance;
 
   List<Colores> parseColores(String responseBody) {
-    final parsed =
-        jsonDecode(responseBody)["color"].cast<Map<String, dynamic>>();
+    List<dynamic> parsed = jsonDecode(responseBody)["selections"][0]["colors"];
+    late List<dynamic> colores = <dynamic>[];
 
-    return parsed.map<Colores>((json) => Colores.fromJson(json)).toList();
+    for (int i = 0; i < parsed.length; i++) {
+      colores.add(parsed[i][0]);
+    }
+    print(colores);
+    final result = colores.cast<Map<String, dynamic>>();
+    return result.map<Colores>((json) => Colores.fromJson(json)).toList();
   }
 
   Future<List<Colores>> getColores() async {
-    var result = await http.get(Uri.parse(apiUrl));
+    var result = await http.get(Uri.parse(apiUrl), headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'x-token': _securitySingleton!.tokenAccess
+    });
     return parseColores(result.body);
   }
 
@@ -24,10 +34,12 @@ class coloresApi {
       Uri.parse(Enviroment().url_qa + '/color_c'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'x-token': _securitySingleton!.tokenAccess
       },
       body: jsonEncode(<String, String>{
-        'producto': _color_c.producto,
-        'color': _color_c.color
+        'uid': _color_c.id,
+        'name': _color_c.name,
+        'code': _color_c.code
       }),
     );
 

@@ -15,7 +15,10 @@ class searchTrips extends StatelessWidget {
           children: <Widget>[listaProductos()],
         ),
         ProfileBackground(),
-        ProfileHeader(),
+        Padding(
+          padding: EdgeInsets.only(left: 5, bottom: 0, right: 30, top: 20),
+          child: ProfileHeader(),
+        )
       ],
     );
   }

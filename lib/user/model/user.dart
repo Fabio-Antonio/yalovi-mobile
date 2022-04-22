@@ -4,7 +4,7 @@ class user {
   final String name;
   final String email;
   final String photoURL;
-  final String phoneNumber;
+  final String? phoneNumber;
 
   user(
       {Key? key,
