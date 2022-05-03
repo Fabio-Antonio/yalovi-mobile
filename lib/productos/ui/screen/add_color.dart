@@ -45,16 +45,6 @@ class _addColor extends State<addColor> {
                       margin: EdgeInsets.only(top: 90.0, bottom: 10.0),
                       child: dropdown(
                         color: _color,
-                        onValueChanged: (Colores? val) {
-                          setState(() {
-                            _color = val!;
-                            myProvider.colores = val;
-                            widget._scaffoldKey.currentState!
-                                .showSnackBar(SnackBar(
-                              content: Text(myProvider.colores.name),
-                            ));
-                          });
-                        },
                       ),
                     ),
                     buttonGreen(

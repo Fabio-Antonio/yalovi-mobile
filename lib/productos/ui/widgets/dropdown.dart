@@ -8,9 +8,8 @@ class dropdown extends StatefulWidget {
   final ProductosBloc = productosBloc();
 
   late Colores color;
-  final ValueChanged<Colores?>? onValueChanged;
 
-  dropdown({Key? key, required this.onValueChanged, required this.color});
+  dropdown({Key? key, required this.color});
 
   @override
   _dropdown createState() => _dropdown();
@@ -19,41 +18,42 @@ class dropdown extends StatefulWidget {
 class _dropdown extends State<dropdown> {
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<productosBloc>(context);
+    var myProvider = BlocProvider.of<productosBloc>(context);
     // TODO: implement build
 
     return FutureBuilder<List<Colores>>(
       future: widget.ProductosBloc.getColores(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (!snapshot.hasError || snapshot.hasData || snapshot.data == null) {
-          return _buildDropdown(snapshot.data);
-        } else {
-          return CircularProgressIndicator();
-        }
+        return snapshot.hasData
+            ? Container(
+                child: DropdownButton<Colores>(
+                  hint: Text(widget.color.name == ''
+                      ? "Seleccione un color"
+                      : widget.color.name),
+                  items: snapshot.data.map<DropdownMenuItem<Colores>>((value) {
+                    return DropdownMenuItem<Colores>(
+                        value: value,
+                        child: Row(
+                          children: <Widget>[
+                            Text(value.name),
+                            Icon(Icons.arrow_back_ios_new)
+                          ],
+                        ));
+                  }).toList(),
+                  onChanged: (value) {
+                    setState(() {
+                      myProvider.colores = value!;
+                      widget.color = value;
+                    });
+                  },
+                ),
+              )
+            : Container(
+                child: Center(
+                  child: Text('Loading...'),
+                ),
+              );
       },
     );
-  }
-
-  Widget _buildDropdown(List<Colores> snapshot) {
-    if (snapshot == null) {
-      return CircularProgressIndicator();
-    } else {
-      return DropdownButton<Colores>(
-        value: snapshot.first,
-        icon: Icon(Icons.arrow_circle_down_outlined),
-        hint: Text('Seleccione un color'),
-        items: snapshot.map((Colores value) {
-          return DropdownMenuItem<Colores>(
-              value: value,
-              child: Row(
-                children: <Widget>[
-                  Text(value.name),
-                  Icon(Icons.arrow_back_ios_new)
-                ],
-              ));
-        }).toList(),
-        onChanged: widget.onValueChanged,
-      );
-    }
   }
 }
