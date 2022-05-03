@@ -104,33 +104,15 @@ class _addProducto extends State<addProducto> {
                             TextInput(
                               hintText: "Url imagen",
                               controller: widget._controllerUrlText,
-                              inputType: TextInputType.number,
+                              inputType: TextInputType.url,
                               maxLines: 3,
                               onValueChanged: (String value) {},
                             ),
                             SizedBox(height: 10),
-                            dropdown_sub(
-                                onValueChanged: (Sub_categoria? value) {
-                                  myProvider.sub_categoria = value!;
-                                  widget._sub_categoria = value;
-                                  widget._scaffoldKey.currentState!
-                                      .showSnackBar(SnackBar(
-                                    content: Text(
-                                        myProvider.sub_categoria.sub_categoria),
-                                  ));
-                                },
-                                sub_categoria: widget._sub_categoria),
+                            dropdown_sub(sub_categoria: widget._sub_categoria),
                             SizedBox(height: 10),
                             dropdown_marca(
-                              onValueChanged: (Marca? value) {
-                                myProvider.marca = value!;
-                                widget._marca = value;
-                                widget._scaffoldKey.currentState!
-                                    .showSnackBar(SnackBar(
-                                  content: Text(myProvider.marca.marca),
-                                ));
-                              },
-                              marca: widget._marca,
+                              marcaSelected: widget._marca,
                             ),
                             SizedBox(height: 10),
                             Switch(
