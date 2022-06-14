@@ -21,7 +21,7 @@ class ProfilePlacesList extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 CircularProgressIndicator(),
-                Text("No se analiticos")
+                Text("No se encontraron analiticos")
               ],
             ),
           );

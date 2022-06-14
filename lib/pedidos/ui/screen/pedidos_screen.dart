@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
@@ -39,7 +40,9 @@ class pedidosScreen extends StatelessWidget {
                   tittle: "Comprado")
             ],
           ),
-          ProfileBackground(),
+          ProfileBackground(
+            sizeScreen: Constants().simpleBar,
+          ),
           ProfileHeader(),
         ],
       ),

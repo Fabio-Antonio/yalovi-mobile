@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/marca.dart';
@@ -72,7 +73,7 @@ class _addProducto extends State<addProducto> {
       key: widget._scaffoldKey,
       body: Stack(
         children: <Widget>[
-          ProfileBackground(),
+          ProfileBackground(sizeScreen: Constants().simpleBar),
           ListView(
             children: <Widget>[
               ProfileHeader(),

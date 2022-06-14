@@ -1,4 +1,4 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/productos/model/caracteristicas.dart';
 import 'dart:convert';
 
@@ -10,7 +10,7 @@ class caracteristicaApi {
 
   Future<String> createCaracteristica(Caracteristica _caracteristica) async {
     final response = await http.post(
-      Uri.parse(Enviroment().url_qa + '/Caracteristicas'),
+      Uri.parse(Constants().url_qa + '/Caracteristicas'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'x-token': _securitySingleton!.tokenAccess

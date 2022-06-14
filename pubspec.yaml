@@ -42,6 +42,7 @@ dependencies:
   location_permissions: ^3.0.0  
   geocoding: ^2.0.0
   flutter_native_splash: ^1.3.3
+  simple_animations: ^1.3.3
 
 dev_dependencies:
   flutter_test:
@@ -96,6 +97,7 @@ flutter:
     - assets/img/envio.png
     - assets/img/entregado.png
     - assets/img/chat.png
+    - assets/products.json
 
   fonts:
     - family: Lato

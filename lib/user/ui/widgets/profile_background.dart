@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProfileBackground extends StatelessWidget {
+  double sizeScreen;
+  ProfileBackground({Key? key, required this.sizeScreen});
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -8,7 +11,7 @@ class ProfileBackground extends StatelessWidget {
 
     return Container(
       width: screenWidth,
-      height: screenHeight * 0.40,
+      height: screenHeight * sizeScreen,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [Color(0xFFF09F00), Colors.amber],

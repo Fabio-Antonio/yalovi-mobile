@@ -1,10 +1,10 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/pedidos/model/pedidos.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class pedidosApi {
-  final String apiUrl = Enviroment().url_qa + "/pedidos";
+  final String apiUrl = Constants().url_qa + "/pedidos";
 
   List<Pedidos> parsePedidos(String responseBody) {
     final parsed =

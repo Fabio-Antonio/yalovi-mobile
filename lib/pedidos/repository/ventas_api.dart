@@ -1,11 +1,11 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/pedidos/model/ventas.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class ventasApi {
-  final String apiUrl = Enviroment().url_qa + "/ventas";
+  final String apiUrl = Constants().url_qa + "/ventas";
   final _securitySingleton = securitySingleton.instance;
 
   List<Ventas> parseVentas(String responseBody) {
