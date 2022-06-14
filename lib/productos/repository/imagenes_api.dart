@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/productos/model/imagen.dart';
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
@@ -10,7 +10,7 @@ class imagenesApi {
 
   Future<String> createImage(Imagen _imagen) async {
     final response = await http.post(
-      Uri.parse(Enviroment().url_qa + '/imagenes'),
+      Uri.parse(Constants().url_qa + '/imagenes'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'x-token': _securitySingleton!.tokenAccess

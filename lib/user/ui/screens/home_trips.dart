@@ -11,7 +11,8 @@ class HomeTrips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Stack(
+    return Scaffold(
+        body: Stack(
       children: <Widget>[
         ListView(
           children: <Widget>[
@@ -21,6 +22,6 @@ class HomeTrips extends StatelessWidget {
         ),
         HeaderAppBar()
       ],
-    );
+    ));
   }
 }

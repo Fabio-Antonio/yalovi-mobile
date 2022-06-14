@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/clasification/ui/screens/add_category.dart';
 import 'package:platzi_trips_app/clasification/ui/widgets/category_list.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/widgets/profile_background.dart';
@@ -25,7 +26,9 @@ class searchCategory extends StatelessWidget {
                 tittle: 'Agregar')
           ],
         ),
-        ProfileBackground(),
+        ProfileBackground(
+          sizeScreen: Constants().simpleBar,
+        ),
         Padding(
           padding: EdgeInsets.only(left: 5, bottom: 0, right: 30, top: 20),
           child: ProfileHeader(),

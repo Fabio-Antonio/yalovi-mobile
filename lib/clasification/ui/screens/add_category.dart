@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/clasification/bloc/bloc_clasification.dart';
 import 'package:platzi_trips_app/clasification/model/category.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/widgets/profile_background.dart';
@@ -23,7 +24,9 @@ class addCategory extends StatelessWidget {
       key: _scaffoldKey,
       body: Stack(
         children: <Widget>[
-          ProfileBackground(),
+          ProfileBackground(
+            sizeScreen: Constants().simpleBar,
+          ),
           ListView(
             children: <Widget>[
               ProfileHeader(),

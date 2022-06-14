@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/clasification/ui/screens/add_category.dart';
 import 'package:platzi_trips_app/clasification/ui/screens/search_category.dart';
 import 'package:platzi_trips_app/productos/ui/screen/add_marca.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/user/ui/screens/home_shop.dart';
+import 'package:platzi_trips_app/user/ui/screens/home_trips.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_trips.dart';
-import 'package:platzi_trips_app/user/ui/screens/home_trips.dart';
 import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
 import 'user/ui/screens/profile_trips.dart';
 
@@ -21,7 +21,7 @@ class _PlatziTrips extends State<PlatziTrips> {
   int indexTap = 0;
   final UserBloc = userBloc();
   final List<Widget> widgetsChildren = [
-    HomeTrips(),
+    HomeShop(),
     searchTrips(),
     ProfileTrips()
   ];
@@ -44,11 +44,9 @@ class _PlatziTrips extends State<PlatziTrips> {
             onTap: onTapTapped,
             currentIndex: indexTap,
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("")),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.search), title: Text("")),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person), title: Text("")),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+              BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+              BottomNavigationBarItem(icon: Icon(Icons.analytics), label: ""),
             ]),
       ),
       drawer: Drawer(
@@ -72,7 +70,10 @@ class _PlatziTrips extends State<PlatziTrips> {
             ),
             ListTile(
               title: const Text('Mi cuenta'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeTrips()));
+              },
             ),
             ListTile(
               title: const Text('Clasificación'),

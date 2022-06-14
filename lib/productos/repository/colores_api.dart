@@ -1,4 +1,4 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/productos/model/selections.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -6,7 +6,7 @@ import 'package:platzi_trips_app/productos/model/color_c.dart';
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class coloresApi {
-  final String apiUrl = Enviroment().url_qa + "/selections";
+  final String apiUrl = Constants().url_qa + "/selections";
   final _securitySingleton = securitySingleton.instance;
 
   List<Colores> parseColores(String responseBody) {
@@ -31,7 +31,7 @@ class coloresApi {
 
   Future<String> createColores(Colores_c _color_c) async {
     final response = await http.post(
-      Uri.parse(Enviroment().url_qa + '/color_c'),
+      Uri.parse(Constants().url_qa + '/color_c'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'x-token': _securitySingleton!.tokenAccess

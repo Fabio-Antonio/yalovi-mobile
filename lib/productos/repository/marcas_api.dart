@@ -1,11 +1,11 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/productos/model/marca.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class marcasApi {
-  final String apiUrl = Enviroment().url_qa + "/marca";
+  final String apiUrl = Constants().url_qa + "/marca";
   final _securitySingleton = securitySingleton.instance;
 
   List<Marca> parseMarcas(String responseBody) {

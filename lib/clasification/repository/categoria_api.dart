@@ -1,4 +1,4 @@
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
@@ -6,7 +6,7 @@ import 'package:platzi_trips_app/clasification/model/category.dart';
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 
 class categoriaApi {
-  final String apiUrl = Enviroment().url_qa + '/categorias';
+  final String apiUrl = Constants().url_qa + '/categorias';
   final _securitySingleton = securitySingleton.instance;
 
   Future<String> createCategory(Category _category) async {

@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:platzi_trips_app/enviroment.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/singleton/security_singleton.dart';
 import 'package:platzi_trips_app/user/model/analytics.dart';
 
 class analyticsApi {
-  final String apiUrl = Enviroment().url_qa + "/analytical";
+  final String apiUrl = Constants().url_qa + "/analytical";
   final _securitySingleton = securitySingleton.instance;
   List<Analytics> parseAnalytics(String responseBody) {
     print(jsonDecode(responseBody)["result"]);
