@@ -1,13 +1,34 @@
+import 'package:flutter/material.dart';
+
 class Product {
-  final String name;
-  final String brand;
-  final String imageURL;
-  final int price;
+  String id = "";
+  bool segunda_mano = false;
+  bool descuento = false;
+  String sub_categoria = "";
+  String nombre_producto = "";
+  int precio = 0;
+  String marca = "";
+  String url_imagen = "";
 
-  Product(this.name, this.brand, this.imageURL, this.price);
+  Product(
+      {Key? key,
+      required this.id,
+      required this.segunda_mano,
+      required this.descuento,
+      required this.sub_categoria,
+      required this.nombre_producto,
+      required this.precio,
+      required this.marca,
+      required this.url_imagen});
 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return new Product(
-        json["name"], json["brand"], json["imageURL"], json["price"]);
+  Product.fromJson(Map<String, dynamic> json) {
+    id = json['uid'];
+    segunda_mano = json['segunda_mano'] as bool;
+    descuento = json['descuento'] as bool;
+    sub_categoria = json['sub_categoria'];
+    nombre_producto = json['nombre_producto'];
+    precio = json['precio'] as int;
+    marca = json['marca'];
+    url_imagen = json['url_imagen'];
   }
 }

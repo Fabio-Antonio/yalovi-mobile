@@ -32,9 +32,10 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 20),
+      padding: EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 20),
       height: MediaQuery.of(context).size.height * 0.8,
-      child: Column(
+      child: SingleChildScrollView(
+          child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
@@ -66,7 +67,7 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Text(
             "Color",
@@ -111,7 +112,7 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Text(
             'Size',
@@ -160,7 +161,7 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
           ),
           // Slider Price Renge filter
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -169,11 +170,11 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
                 'Price Range',
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     '\$ ${selectedRange.start.toStringAsFixed(2)}',
@@ -210,7 +211,7 @@ class _ShowFilterModalState extends State<ShowFilterModal> {
           ),
           buttonShop(tittle: 'Filter', onPressed: () {})
         ],
-      ),
+      )),
     );
   }
 }

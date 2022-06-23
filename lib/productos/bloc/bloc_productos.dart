@@ -14,6 +14,7 @@ import 'package:platzi_trips_app/productos/repository/colores_repository.dart';
 import 'package:platzi_trips_app/productos/repository/imagenes_repository.dart';
 import 'package:platzi_trips_app/productos/repository/marcas_repository.dart';
 import 'package:platzi_trips_app/productos/repository/productos_repository.dart';
+import 'package:platzi_trips_app/productos/repository/products_repository.dart';
 import 'package:platzi_trips_app/productos/repository/sub_cat_repository.dart';
 
 class productosBloc with ChangeNotifier implements Bloc {
@@ -23,6 +24,7 @@ class productosBloc with ChangeNotifier implements Bloc {
   final _coloresRepository = coloresRepository();
   final _marcasRepository = marcasRepository();
   final _subCatRepository = subCatRepository();
+  final _productsRepository = ProductssRepository();
 
   String url = "";
 
@@ -85,6 +87,10 @@ class productosBloc with ChangeNotifier implements Bloc {
 
   Future<String> createProduct(Producto _producto) async {
     return await _productos_repository.createProducto(_producto);
+  }
+
+  Future<List<Producto>> getProducts() async {
+    return await _productsRepository.getProducts();
   }
 
   @override

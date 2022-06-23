@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/clasification/bloc/bloc_clasification.dart';
 import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/splash_screen.dart';
-import 'platzi_trips.dart';
 import 'user/bloc/bloc_user.dart';
 import 'user/ui/screens/sign_in_screen.dart';
 import 'package:firebase_core/firebase_core.dart';

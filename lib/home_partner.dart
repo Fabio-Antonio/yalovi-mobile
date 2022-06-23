@@ -1,26 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/home_partner.dart';
-import 'package:platzi_trips_app/productos/ui/screen/product_cart.dart';
-import 'package:platzi_trips_app/productos/ui/screen/search_product.dart';
+import 'package:platzi_trips_app/clasification/ui/screens/search_category.dart';
+import 'package:platzi_trips_app/productos/ui/screen/add_marca.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/productos/ui/screen/home_shop.dart';
+import 'package:platzi_trips_app/user/ui/screens/home_trips.dart';
 import 'package:platzi_trips_app/user/ui/screens/profile_header.dart';
+import 'package:platzi_trips_app/user/ui/screens/profile_trips.dart';
+import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
+import 'user/ui/screens/profile_trips.dart';
 
-class PlatziTrips extends StatefulWidget {
+class HomePartner extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _PlatziTrips();
+    return _HomePartner();
   }
 }
 
-class _PlatziTrips extends State<PlatziTrips> {
+class _HomePartner extends State<HomePartner> {
   int indexTap = 0;
   final UserBloc = userBloc();
   final List<Widget> widgetsChildren = [
-    HomeShop(),
-    SearchProduct(),
-    ProductCart()
+    HomeTrips(),
+    searchTrips(),
+    ProfileTrips()
   ];
 
   void onTapTapped(int index) {
@@ -43,8 +46,7 @@ class _PlatziTrips extends State<PlatziTrips> {
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_cart), label: ""),
+              BottomNavigationBarItem(icon: Icon(Icons.analytics), label: ""),
             ]),
       ),
       drawer: Drawer(
@@ -70,14 +72,21 @@ class _PlatziTrips extends State<PlatziTrips> {
               title: const Text('Mi cuenta'),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePartner()));
+                    MaterialPageRoute(builder: (context) => HomeTrips()));
               },
             ),
             ListTile(
-              title: const Text('Socio'),
+              title: const Text('Clasificación'),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePartner()));
+                    MaterialPageRoute(builder: (context) => searchCategory()));
+              },
+            ),
+            ListTile(
+              title: const Text('Marcas'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => addMarca()));
               },
             ),
             ListTile(

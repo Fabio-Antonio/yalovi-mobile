@@ -1,9 +1,9 @@
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/modals/add_to_card_modal.dart';
 import 'package:platzi_trips_app/modals/show_filter_Modal.dart';
-import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
+import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
+import 'package:platzi_trips_app/productos/model/producto.dart';
 import 'package:platzi_trips_app/user/ui/animation/fade_animations.dart';
-import 'package:platzi_trips_app/user/model/product.dart';
 import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class HomeShop extends StatefulWidget {
 class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
   late ScrollController _scrollController;
   bool _isScrolled = false;
-  final UserBloc = userBloc();
+  final Productosbloc = productosBloc();
 
   List<dynamic> productList = [];
 
@@ -44,7 +44,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<userBloc>(context);
+    BlocProvider.of<productosBloc>(context);
     return Stack(
       children: <Widget>[
         CustomScrollView(controller: _scrollController, slivers: [
@@ -67,9 +67,9 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                   duration: Duration(milliseconds: 500),
                   child: FadeAnimation(
                       1,
-                      Text("Find your 2021 Collections",
+                      Text("Encuentra los Mejores Productos ",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 28.0,
                           ))),
                 ),
@@ -80,6 +80,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
             bottom: AppBar(
               toolbarHeight: 70,
               elevation: 0,
+              automaticallyImplyLeading: false,
               backgroundColor: Colors.transparent,
               title: Row(
                 children: [
@@ -285,10 +286,10 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
   }
 
   void products() async {
-    productList = await UserBloc.getProduct();
+    productList = await Productosbloc.getProducts();
   }
 
-  productCart(Product product) {
+  productCart(Producto product) {
     return AspectRatio(
       aspectRatio: 1 / 1,
       child: FadeAnimation(
@@ -323,7 +324,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                           width: double.infinity,
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(15),
-                              child: Image.network(product.imageURL,
+                              child: Image.network(product.url_imagen,
                                   fit: BoxFit.cover)),
                         ),
                         // Add to cart button
@@ -355,7 +356,8 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                     height: 20,
                   ),
                   Text(
-                    product.name,
+                    product.nombre_producto,
+                    maxLines: 1,
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -368,14 +370,14 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        product.brand,
+                        product.segunda_mano ? "Usado" : "Nuevo",
                         style: TextStyle(
                           color: Colors.orange.shade400,
                           fontSize: 14,
                         ),
                       ),
                       Text(
-                        "\$ " + product.price.toString() + '.00',
+                        "\$ " + product.precio.toString() + '.00',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
@@ -390,7 +392,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
     );
   }
 
-  forYou(Product product) {
+  forYou(Producto product) {
     return AspectRatio(
       aspectRatio: 3 / 1,
       child: FadeAnimation(
@@ -417,7 +419,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child:
-                          Image.network(product.imageURL, fit: BoxFit.cover)),
+                          Image.network(product.url_imagen, fit: BoxFit.cover)),
                 ),
                 SizedBox(
                   width: 10,
@@ -428,7 +430,8 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          product.name,
+                          product.nombre_producto,
+                          maxLines: 1,
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
@@ -438,7 +441,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                           height: 5,
                         ),
                         Text(
-                          product.brand,
+                          product.segunda_mano ? "Usado" : "Nuevo",
                           style: TextStyle(
                             color: Colors.orange.shade400,
                             fontSize: 13,
@@ -448,7 +451,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                           height: 10,
                         ),
                         Text(
-                          "\$ " + product.price.toString() + '.00',
+                          "\$ " + product.precio.toString() + '.00',
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 18,
