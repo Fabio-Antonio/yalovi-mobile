@@ -30,7 +30,6 @@ class _addToCardModal extends State<addToCardModal> {
   int _selectedSize = 1;
   @override
   Widget build(BuildContext context) {
-    print('se llama al modal');
     return Container(
       height: 350,
       padding: EdgeInsets.all(20),
