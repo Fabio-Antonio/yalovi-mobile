@@ -3,6 +3,7 @@ import 'package:platzi_trips_app/modals/add_to_card_modal.dart';
 import 'package:platzi_trips_app/modals/show_filter_Modal.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
+import 'package:platzi_trips_app/productos/ui/screen/vip_product_view.dart';
 import 'package:platzi_trips_app/user/ui/animation/fade_animations.dart';
 import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
 import 'package:flutter/material.dart';
@@ -296,8 +297,10 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
           1.5,
           GestureDetector(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => searchTrips()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => VipProductView(product: product)));
             },
             child: Container(
               margin: EdgeInsets.only(right: 20, bottom: 25),
