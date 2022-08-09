@@ -16,7 +16,6 @@ class coloresApi {
     for (int i = 0; i < parsed.length; i++) {
       colores.add(parsed[i][0]);
     }
-    print(colores);
     final result = colores.cast<Map<String, dynamic>>();
     return result.map<Colores>((json) => Colores.fromJson(json)).toList();
   }

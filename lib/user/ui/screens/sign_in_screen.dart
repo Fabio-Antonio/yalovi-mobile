@@ -6,7 +6,6 @@ import 'package:platzi_trips_app/widgets/button_green.dart';
 import 'package:platzi_trips_app/user/bloc/bloc_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'package:location_permissions/location_permissions.dart';
 import 'package:platzi_trips_app/platzi_trips.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -21,11 +20,17 @@ class _SignInScreen extends State<SignInScreen> {
   final UserBloc = userBloc();
   late user _user;
   final _securitySingleton = securitySingleton.instance;
+  late bool permissionGranted = false;
+
+  @override
+ void initState() {
+    super.initState();
+    permissionService();
+  }
+
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<userBloc>(context);
-
-    UserBloc.permission().then((PermissionStatus status) => print(status));
 
     // TODO: implement build
     return _handleCurrentSession();
@@ -37,8 +42,8 @@ class _SignInScreen extends State<SignInScreen> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           //snapshot de aca contiene la data, el objeto user. Abajo se hace algo si no hay data de inicio de sesion
           if (!snapshot.hasData ||
-              snapshot.hasError ||
-              PermissionStatus.denied == true) {
+              snapshot.hasError||
+              !permissionGranted) {
             return signInGoogleUI();
           } else {
             return PlatziTrips();
@@ -76,5 +81,13 @@ class _SignInScreen extends State<SignInScreen> {
         ],
       ),
     );
+  }
+  void permissionService()  async {
+    final permissionResult = await UserBloc.permission();
+    if(permissionResult) {
+      permissionGranted=true;
+      return;
+    }
+    permissionService();
   }
 }
