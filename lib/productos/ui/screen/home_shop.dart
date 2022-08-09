@@ -1,9 +1,11 @@
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:platzi_trips_app/contants.dart';
 import 'package:platzi_trips_app/modals/add_to_card_modal.dart';
 import 'package:platzi_trips_app/modals/show_filter_Modal.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
 import 'package:platzi_trips_app/productos/model/producto.dart';
 import 'package:platzi_trips_app/productos/ui/screen/vip_product_view.dart';
+import 'package:platzi_trips_app/singleton/configuration_singleton.dart';
 import 'package:platzi_trips_app/user/ui/animation/fade_animations.dart';
 import 'package:platzi_trips_app/productos/ui/screen/search_trips.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +21,7 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
   late ScrollController _scrollController;
   bool _isScrolled = false;
   final Productosbloc = productosBloc();
+  final _configurationSingleton = ConfigurationSingleton.instance;
 
   List<dynamic> productList = [];
 
@@ -68,14 +71,14 @@ class _HomeShopState extends State<HomeShop> with TickerProviderStateMixin {
                   duration: Duration(milliseconds: 500),
                   child: FadeAnimation(
                       1,
-                      Text("Encuentra los Mejores Productos ",
+                      Text(_configurationSingleton?.configuration?.title??"",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 28.0,
                           ))),
                 ),
-                background: Image.asset(
-                  "assets/img/envio.png",
+                background: Image.network(
+                  _configurationSingleton?.configuration?.url_image??Constants().url_qa+"/uploads/no-img.png",
                   fit: BoxFit.cover,
                 )),
             bottom: AppBar(

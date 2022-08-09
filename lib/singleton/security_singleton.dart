@@ -3,7 +3,7 @@ class securitySingleton {
   static securitySingleton? _instance;
 
   securitySingleton._internal() {
-    tokenAccess = "prueba";
+    tokenAccess = "";
   }
 
   static securitySingleton? get instance {

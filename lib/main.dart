@@ -3,9 +3,10 @@ import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/clasification/bloc/bloc_clasification.dart';
 import 'package:platzi_trips_app/pedidos/bloc/bloc_pedidos.dart';
 import 'package:platzi_trips_app/productos/bloc/bloc_productos.dart';
-import 'package:platzi_trips_app/splash_screen.dart';
+import 'package:platzi_trips_app/splash-screen/view-model/configuration_view_model.dart';
+import 'package:platzi_trips_app/splash-screen/view/splash_screen.dart';
+import 'package:provider/provider.dart';
 import 'user/bloc/bloc_user.dart';
-import 'user/ui/screens/sign_in_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -15,15 +16,16 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  String descriptionDummy =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: Init.instance.initialize(),
         builder: (context, AsyncSnapshot snapshot) {
-          return BlocProvider(
+          return MultiProvider(
+              providers: [
+                ChangeNotifierProvider.value(value: ConfigurationViewModel()),
+              ],
+              child: BlocProvider(
               child: BlocProvider(
                   child: BlocProvider(
                       child: BlocProvider(
@@ -41,11 +43,11 @@ class MyApp extends StatelessWidget {
                                 // is not restarted.
                                 primarySwatch: Colors.amber,
                               ),
-                              home: SignInScreen()),
+                              home: Splash()),
                           bloc: productosBloc()),
                       bloc: userBloc()),
                   bloc: clasificationBloc()),
-              bloc: pedidosBloc());
+              bloc: pedidosBloc()));
         });
   }
 }

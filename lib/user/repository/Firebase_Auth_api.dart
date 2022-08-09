@@ -17,16 +17,13 @@ class FirebaseAuthAPI {
     // Obtain the auth details from the request
     final GoogleSignInAuthentication googleAuth =
         await googleUser!.authentication;
-
     // Create a new credential
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-
     final UserCredential userCredential =
         await FirebaseAuth.instance.signInWithCredential(credential);
-
     final _user = new user(
         name: userCredential.user!.displayName!,
         email: userCredential.user!.email!,
