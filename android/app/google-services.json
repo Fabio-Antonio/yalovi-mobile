@@ -68,6 +68,14 @@
           }
         },
         {
+          "client_id": "223995574229-udtbfb04e3dv086nh3fvol31h6oheu59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platzi_trips_app",
+            "certificate_hash": "0b8efe894456d826fcc66d2027ec52355e6ecefe"
+          }
+        },
+        {
           "client_id": "223995574229-p3qfaiddfd4j3ipjrc9msftb69kc61rb.apps.googleusercontent.com",
           "client_type": 3
         }

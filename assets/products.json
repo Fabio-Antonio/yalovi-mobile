@@ -1,28 +1,421 @@
 {
-    "products": [
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUMXkZJucgCg0LhkpWjpIF3QAipWOC0CaH5g&usqp=CAU",
+    "title": {
+        "fontSize": 16.0,
+        "text": "Encuentra los mejores productos para tu hogar.",
+        "padding": 10.0
+    },
+    "button": {
+        "text": "ver nuestro catálogo",
+        "height": 80.0,
+        "width": 120.0,
+        "color": "#fff5678",
+        "screen": "pageSearch"
+    },
+    "sections": [
         {
-            "name": "Winter Coat",
-            "imageURL": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29hdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            "brand": "OSIRUS",
-            "price": 100
+            "title": "Productos populares",
+            "label": "Ver más",
+            "labelAction": "pageSearch",
+            "cardType": "normal",
+            "height": 320.0,
+            "products": [
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Winter Coat",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 100.0,
+                    "priceLabel": "$100.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Sweatshirt",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38P-Ob3ClR5az1tyAOS5Ap8i4d-6BKJZ08fmxbdOMW9a3ml3jkfBmlzN5_eAC-Q59CuM&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 49.0,
+                    "priceLabel": "$49.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Pant",
+                    "url_imagen": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    "marca": "OSIRUS",
+                    "precio": 58.0,
+                    "priceLabel": "$58.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Green Sweater",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNNPojFORMcTqXFg4-A6EdC_fboehbICW8Dtc8tW0bWmviu2HmzJtoA11MrQ-FxuChz0&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 69.0,
+                    "priceLabel": "$69.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "name": "Cotton Sweatshirt",
-            "imageURL": "https://images.unsplash.com/photo-1556172732-bcded74ff3a2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHN3ZWF0c2hpcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            "brand": "OSIRUS",
-            "price": 49
+            "title": "Servicios",
+            "label": "Ver más",
+            "labelAction": "pageSearch",
+            "cardType": "Service",
+            "height": 180.0,
+            "products": [
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Winter Coat",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 100.0,
+                    "priceLabel": "$100.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Sweatshirt",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38P-Ob3ClR5az1tyAOS5Ap8i4d-6BKJZ08fmxbdOMW9a3ml3jkfBmlzN5_eAC-Q59CuM&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 49.0,
+                    "priceLabel": "$49.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Pant",
+                    "url_imagen": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    "marca": "OSIRUS",
+                    "precio": 58.0,
+                    "priceLabel": "$58.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Green Sweater",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNNPojFORMcTqXFg4-A6EdC_fboehbICW8Dtc8tW0bWmviu2HmzJtoA11MrQ-FxuChz0&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 69.0,
+                    "priceLabel": "$69.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "name": "Cotton Pant",
-            "imageURL": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            "brand": "OSIRUS",
-            "price": 58
+            "title": "Lo más vendido",
+            "label": "Ver más",
+            "labelAction": "pageSearch",
+            "cardType": "normal",
+            "height": 320.0,
+            "products": [
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Winter Coat",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 100.0,
+                    "priceLabel": "$100.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Sweatshirt",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38P-Ob3ClR5az1tyAOS5Ap8i4d-6BKJZ08fmxbdOMW9a3ml3jkfBmlzN5_eAC-Q59CuM&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 49.0,
+                    "priceLabel": "$49.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Pant",
+                    "url_imagen": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    "marca": "OSIRUS",
+                    "precio": 58.0,
+                    "priceLabel": "$58.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Green Sweater",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNNPojFORMcTqXFg4-A6EdC_fboehbICW8Dtc8tW0bWmviu2HmzJtoA11MrQ-FxuChz0&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 69.0,
+                    "priceLabel": "$69.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "name": "Green Sweater",
-            "imageURL": "https://images.unsplash.com/photo-1536992266094-82847e1fd431?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3dlYXRlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            "brand": "OSIRUS",
-            "price": 69
+            "title": "Temporada",
+            "label": "Ver más",
+            "labelAction": "pageSearch",
+            "cardType": "normal",
+            "height": 320.0,
+            "products": [
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Winter Coat",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 100.0,
+                    "priceLabel": "$100.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Sweatshirt",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38P-Ob3ClR5az1tyAOS5Ap8i4d-6BKJZ08fmxbdOMW9a3ml3jkfBmlzN5_eAC-Q59CuM&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 49.0,
+                    "priceLabel": "$49.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Cotton Pant",
+                    "url_imagen": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    "marca": "OSIRUS",
+                    "precio": 58.0,
+                    "priceLabel": "$58.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                },
+                {
+                    "uid": "hagsjkoa984",
+                    "segunda_mano": false,
+                    "descuento": false,
+                    "sub_categoria": "hogar",
+                    "nombre_producto": "Green Sweater",
+                    "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNNPojFORMcTqXFg4-A6EdC_fboehbICW8Dtc8tW0bWmviu2HmzJtoA11MrQ-FxuChz0&usqp=CAU",
+                    "marca": "OSIRUS",
+                    "precio": 69.0,
+                    "priceLabel": "$69.99",
+                    "selectSections": [
+                        {
+                            "title":"Color",
+                            "isColor": true,
+                            "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+                        },
+                        {
+                            "title": "Talla",
+                            "isColor": false,
+                            "values": ["S","M","L","XL"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

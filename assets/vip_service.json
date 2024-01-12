@@ -1,0 +1,31 @@
+{
+  "productName": "Maceta",
+  "productBrand": "Artesanal",
+  "productPriceValue": 300.0,
+  "productPriceLabel": "$ 300.00",
+  "productImage": "https://www.laparisina.mx/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/7/5/7500130352268.jpg",
+  "productDescriptions": [
+    "Take a break from jeans with the parker long straight pant. These lightweight, pleat front pants feature a flattering high waist and loose, straight legs.",
+    "Take a break from jeans with the parker long straight pant. These lightweight, pleat front pants feature a flattering high waist and loose, straight legs.",
+    "Take a break from jeans with the parker long straight pant. These lightweight, pleat front pants feature a flattering high waist and loose, straight legs."
+  ],
+  "selectSections": [
+    {
+      "title":"Color",
+      "isColor": true,
+      "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+    },
+    {
+      "title": "Talla",
+      "isColor": false,
+      "values": ["S","M","L","XL"]
+    }
+  ],
+  "button": {
+    "text": "Añadir al carrito",
+    "height": 80.0,
+    "width": 120.0,
+    "color": "#fff5678",
+    "screen": "pageSearch"
+  }
+}

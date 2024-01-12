@@ -1,0 +1,48 @@
+{
+  "title": {
+    "fontSize": 16.0,
+    "text": "Mi Compra",
+    "padding": 10.0
+  },
+  "button": {
+    "text": "Continuar",
+    "screen": "PayScreen",
+    "height": 30.0,
+    "width": 120.0,
+    "color": "#fff5678"
+  },
+  "payInfo":{
+   "totalLabelValue": "$ 5,500.99",
+    "total": 5000.0,
+    "totalLabel": "Total",
+    "shippingValue": 0.0,
+    "shippingFree": true,
+    "shippingLabelValue": "$ 0.00",
+    "shippingLabel": "Envío gratis",
+    "orderId": "kdjpsppsjjs"
+ },
+  "products": [
+    {
+      "uid": "hagsjkoa984",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Winter Coat",
+      "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+      "marca": "OSIRUS",
+      "precio": 500.99,
+      "priceLabel": "$500.99"
+    },
+    {
+      "uid": "oeoppsksooos",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Winter Coat",
+      "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+      "marca": "OSIRUS",
+      "precio": 500.99,
+      "priceLabel": "$500.99"
+    }
+  ]
+}
