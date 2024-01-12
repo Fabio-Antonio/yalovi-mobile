@@ -1,0 +1,34 @@
+{
+    "otp_data": {
+      "title": "Estamos casi listos!!",
+      "subTitle": "Necesitamos registrar tu número celular para comenzar.",
+      "bottomShetText": "Ingresa el código recibido por SMS",
+      "countryCode": "+52",
+      "inputHint": "Ingresa tu número",
+      "btnLabel": "Enviarme código por SMS",
+       "userInfo": {
+         "requirePhoneValidation": true,
+         "newUser": true,
+         "name": "Fabio Enrique Antonio Lorenzana",
+         "id": "ahhsoppah82702",
+         "email": "ing.fabio.a@gmail.com",
+         "phoneNumber": ""
+       }
+    },
+  "otp_data_login": {
+    "title": "Hola de nuevo Fabio!!",
+    "subTitle": "Verifica tu número de celular ******8263",
+    "bottomShetText": "Ingresa el código recibido por SMS",
+    "countryCode": "+52",
+    "btnLabel": "",
+    "userInfo": {
+      "requirePhoneValidation": false,
+      "newUser": false,
+      "name": "Fabio Enrique Antonio Lorenzana",
+      "id": "ahhsoppah82702",
+      "email": "ing.fabio.a@gmail.com",
+      "phoneNumber": "+525513658263"
+    }
+  }
+
+}

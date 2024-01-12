@@ -1,0 +1,20 @@
+{
+  "options": [
+    {
+      "title": "¿Quiénes somos?",
+      "navigation": "pageContact",
+      "icon": ""
+    },
+    {
+      "title": "Cuenta",
+      "navigation": "pageCount",
+      "icon": ""
+    },
+    {
+      "title": "Contacto",
+      "navigation": "pageCount",
+      "icon": ""
+    }
+
+  ]
+}

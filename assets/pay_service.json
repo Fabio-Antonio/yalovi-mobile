@@ -1,0 +1,65 @@
+{
+  "title": {
+    "fontSize": 16.0,
+    "text": "Pago",
+    "padding": 10.0
+  },
+  "button": {
+    "text": "Confirmar",
+    "screen": "HomeScreen",
+    "height": 30.0,
+    "width": 120.0,
+    "color": "#fff5678"
+  },
+  "paymentMethods": {
+    "totalLabel": "Total",
+    "totalLabelValue": "$ 5,000.00",
+    "totalValue": 5000.0,
+    "title": "Métodos de pago",
+    "methods": [
+      {
+        "isCash": true,
+        "icon": "https://img.icons8.com/carbon-copy/100/cash--v2.png",
+        "banner": {
+          "title": "Pago en efectivo al momento de la entrega.",
+          "icon": "https://img.icons8.com/carbon-copy/100/cash--v2.png"
+        }
+      },
+      {
+        "isCash": false,
+        "icon": "https://img.icons8.com/ios-filled/50/credit-card-front.png",
+        "banner": {
+          "title": "Credito / Débito",
+          "text": "**** **** **** ****",
+          "bottomText": "Fabio Antonio",
+          "icon": "https://img.icons8.com/color/2x/mastercard-logo.png"
+        }
+      }
+    ]
+  },
+  "cardForm": {
+    "title": "Información de tarjeta",
+    "nameHint": "Nombre en la tarjeta",
+    "cardNumberHint": "Numero de tarjeta",
+    "monthHint": "MM",
+    "yearHint": "YY",
+    "securityHint": "CVV"
+  },
+  "addressForm": {
+    "titleHint": "Dirección",
+    "cityHint": "Ciudad",
+    "countyHint": "Alcaldia / Municipio",
+    "streetHint": "Calle",
+    "numberHint": "Numero",
+    "zipHint": "CP"
+  },
+  "address": {
+    "title": "",
+    "city": "",
+    "county": "",
+    "street": "",
+    "number": "",
+    "zip": ""
+  }
+
+}

@@ -1,0 +1,99 @@
+{
+  "title": {
+    "fontSize": 16.0,
+    "text": "Mis Compras",
+    "padding": 10.0
+  },
+  "tabsLength": 3,
+  "tabs": [
+    {
+      "text": "Pendientes",
+      "urlIcon": "",
+      "tabList": [
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "labelText": "Pendiente",
+          "labelBackground": "#FAD53F",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        },
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "labelText": "Pendiente",
+          "labelBackground": "#FAD53F",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        }
+      ]
+    },
+    {
+      "text": "En trayecto",
+      "urlIcon": "",
+      "tabList": [
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Enviado",
+          "labelBackground": "#37C4EA",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        },
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Enviado",
+          "labelBackground": "#37C4EA",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        }
+      ]
+    },
+
+    {
+      "text": "Completado",
+      "urlIcon": "",
+      "tabList": [
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Completado",
+          "labelBackground": "#79F99E",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        },
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Completado",
+          "labelBackground": "#79F99E",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        },
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Completado",
+          "labelBackground": "#79F99E",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        },
+        {
+          "shopCode": "ttahhsooaja",
+          "date": "11/08/2023",
+          "deliveryDate": "12/18/2023",
+          "labelText": "Completado",
+          "labelBackground": "#79F99E",
+          "total": "$180.00",
+          "address": "tepozanes 1522, tulyehualco"
+        }
+      ]
+    }
+  ]
+}

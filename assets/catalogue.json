@@ -1,0 +1,134 @@
+{
+  "input": {
+    "fontSize": 16.0,
+    "textHint": "Mi Compra",
+    "padding": 10.0,
+    "autoComplete": [
+      {
+        "id": "jshjoapa99w",
+        "value": "Maceta de barro"
+      }
+    ]
+  },
+  "products": [
+    {
+      "uid": "hagsjkoa984",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Winter Coat",
+      "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKuQ8-Da2XOw7lerhyxoBmWq-lk-oxi_cLg&usqp=CAU",
+      "marca": "OSIRUS",
+      "precio": 100.0,
+      "priceLabel": "$100.99",
+      "selectSections": [
+        {
+          "title":"Color",
+          "isColor": true,
+          "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+        },
+        {
+          "title": "Talla",
+          "isColor": false,
+          "values": ["S","M","L","XL"]
+        }
+      ]
+    },
+    {
+      "uid": "hagsjkoa984",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Cotton Sweatshirt",
+      "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38P-Ob3ClR5az1tyAOS5Ap8i4d-6BKJZ08fmxbdOMW9a3ml3jkfBmlzN5_eAC-Q59CuM&usqp=CAU",
+      "marca": "OSIRUS",
+      "precio": 49.0,
+      "priceLabel": "$49.99",
+      "selectSections": [
+        {
+          "title":"Color",
+          "isColor": true,
+          "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+        },
+        {
+          "title": "Talla",
+          "isColor": false,
+          "values": ["S","M","L","XL"]
+        }
+      ]
+    },
+    {
+      "uid": "hagsjkoa984",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Cotton Pant",
+      "url_imagen": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHBhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "marca": "OSIRUS",
+      "precio": 58.0,
+      "priceLabel": "$58.99",
+      "selectSections": [
+        {
+          "title":"Color",
+          "isColor": true,
+          "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+        },
+        {
+          "title": "Talla",
+          "isColor": false,
+          "values": ["S","M","L","XL"]
+        }
+      ]
+    },
+    {
+      "uid": "hagsjkoa984",
+      "segunda_mano": false,
+      "descuento": false,
+      "sub_categoria": "hogar",
+      "nombre_producto": "Green Sweater",
+      "url_imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNNPojFORMcTqXFg4-A6EdC_fboehbICW8Dtc8tW0bWmviu2HmzJtoA11MrQ-FxuChz0&usqp=CAU",
+      "marca": "OSIRUS",
+      "precio": 69.0,
+      "priceLabel": "$69.99",
+      "selectSections": [
+        {
+          "title":"Color",
+          "isColor": true,
+          "values": ["#FAD53F","#FAD53F","#FAD53F","#FFFFC1D9","#FFFFC1D9"]
+        },
+        {
+          "title": "Talla",
+          "isColor": false,
+          "values": ["S","M","L","XL"]
+        }
+      ]
+    }
+  ],
+  "categories":[
+    {
+      "key": "interior",
+      "value": "Interior",
+      "background": "#000000"
+    },
+    {
+      "key": "exterior",
+      "value": "Exterior",
+      "background": "#000000"
+    },
+    {
+      "key": "decoration",
+      "value": "Hornamental",
+      "background": "#000000"
+    },
+    {
+      "key": "desert",
+      "value": "Suculentas",
+      "background": "#000000"
+    },
+    {
+      "key": "pots",
+      "value": "Macetas",
+      "background": "#000000"
+    }
+  ]
+}
